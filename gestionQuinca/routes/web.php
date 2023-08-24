@@ -28,6 +28,9 @@ Route::get('/adminGerant',[BoutiqueControler::class, 'indexAdmin'])->name('admin
 //============================routes pour ajouter des categories=================================================//
 Route::get('/ajoutCategorie',[BoutiqueControler::class, 'ajoutCategorie'])->name('ajoutCategorie');
 Route::post('/insererCategorie',[BoutiqueControler::class, 'insererCategorie'])->name('insererCategorie');
+Route::get('/listeCategorie',[BoutiqueControler::class, 'listeCategorie'])->name('listeCategorie');
+Route::get('/produitDeChaqueCategorie/{id}',[BoutiqueControler::class, 'produitDeChaqueCategorie'])->name('produitDeChaqueCategorie');
+
 
 //==========================routes pour ajouter des Produits===================================================//
 Route::get('/ajoutProduit',[BoutiqueControler::class, 'ajoutProduit'])->name('ajoutProduit');

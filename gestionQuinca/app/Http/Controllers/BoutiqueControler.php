@@ -48,6 +48,8 @@ class BoutiqueControler extends Controller
         ]);
     }
     public function insererProduit(Produit $produits,Request $request) {
+        $categories = DB::select("select categories.id from categories where categories.nom=?",[$request->categorie]);
+        //dd($categories[0]->id);
         $produits->nom = $request->nom;
         $produits->image = $request->image;
         $produits->categorie = $request->categorie;
@@ -55,6 +57,7 @@ class BoutiqueControler extends Controller
         $produits->quantiteMin = $request->quantiteMin;
         $produits->prix_unitaire = $request->prix_unitaire;
         $produits->libelle = $request->libelle;
+        $produits->id_cat = $categories[0]->id;
         $produits->save();
         return back()->with('success','Produit ajouté avec succés');
     }
@@ -65,4 +68,21 @@ class BoutiqueControler extends Controller
         return view('produits.detaille',compact('produits'));
     }
 
+//========================== fonction pour afficher la liste et le nombres de produit de chaque categorie===========================
+    public function listeCategorie() {
+        $categorie = DB::select('SELECT c.nom,c.id, COUNT(p.id) AS nombre_de_produits
+        FROM Categories c
+        LEFT JOIN Produits p ON c.id = p.id_cat
+        GROUP BY c.nom,c.id;
+        ');
+        //dd($counte);
+         //$categorie = DB::select('select * from categories');
+        return view('categories.listeCategorie',compact('categorie'));
+    }
+//===========================fonction qui affiche les produits de chaque categorie==================================//
+    public function produitDeChaqueCategorie($id) {
+        $produits = DB::select('SELECT * from produits where id_cat=?',[$id]);
+        
+        return view('categories.produitDeChaqueCategorie',compact('produits'));
+    }
 }

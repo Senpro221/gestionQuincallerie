@@ -17,24 +17,24 @@
   
     <div class="container row-cols-md-12">
         <nav class="navbar navbar-expand-lg navbar-light bg-info shadow p-3 mb-1 bg-light ">
-            <a class="navbar-brand ms-2" style="font-family: 'Times New Roman', Times, serif; font-size: 20px; font-weight: bold;" href="/">SAMA Boutique</a>
+            <a class="navbar-brand ms-2" style="font-family: 'Times New Roman', Times, serif; font-size: 20px; font-weight: bold;" href="/"><img src="{{ asset('image/logo.png')}}" width="110px;" height="60px;"/></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
               <ul class="navbar-nav" style="font-family: 'Times New Roman', Times, serif; font-size: 20px;">
                 <li class="nav-item active">
-                  <a class="nav-link ms-5" href="/">Accueil <span class="sr-only"></span></a>
+                  <a class="nav-link ms-5 active" href="/">Accueil <span class="sr-only"></span></a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="{{ route('listeProduit') }}">Produits</a>
                 </li>
                 <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <a class="nav-link dropdown-toggle" href="{{ route('listeCategorie') }}" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Categorie
                   </a>
                   <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="{{ route('listeCategorie') }}">Liste des Catégories</a>
                     <a class="dropdown-item" href="#">Another action</a>
                     <a class="dropdown-item" href="#">Something else here</a>
                   </div>
@@ -71,7 +71,7 @@
                 </li>
                 @endguest
                 @auth
-                <li class="nav-item dropdown " style=" margin-left: 12rem;">
+                <li class="nav-item dropdown " style=" margin-left: 17rem;">
                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <img
                       src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
