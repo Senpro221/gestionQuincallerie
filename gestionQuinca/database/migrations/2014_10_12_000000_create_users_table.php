@@ -14,9 +14,15 @@ return new class extends Migration
     public function up()
     {
         Schema::create('users', function (Blueprint $table) {
+            $table->engine='InnoDB';
             $table->id();
             $table->string('name');
+            $table->string('prenom',255);
             $table->string('email')->unique();
+            $table->boolean('statut')->nullable();
+            $table->integer('telephone');
+            $table->string('adresse',255);
+            $table->string('role')->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
