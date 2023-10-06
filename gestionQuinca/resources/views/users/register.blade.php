@@ -1,10 +1,10 @@
-gis
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
 <head>
     <meta charset="utf-8">
-    <title>Login & Signup Form | CodingNepal</title>
+    <title>Login & Signup Form </title>
     
     <link rel="stylesheet" href="{{asset('build/assets/register.css')}}">
 
@@ -15,13 +15,13 @@ gis
     <div class="wrapper">
         <hr>
         <div class="title-text">
-            
+          <hr>  
             <div class="title login">Connexion</div>
-            
+          <hr>  
             <div class="title signup">Inscription</div>
-            
+            <hr>
         </div>
-        
+        <hr>
         <div class="form-container">
             @if (session()->has('success'))
               <div class="alert alert-success">
@@ -58,6 +58,7 @@ gis
                         <input type="submit" value="Connexion">
                     </div>
                     <div class="signup-link">Vous n'avez pas de Compte? <a href="">S'inscrire</a></div>
+                    <img  style="position: absolute; margin-top: -15px; margin-left: -35px;" width="400px;" height="200px;" src="{{ asset('image/quin.png')}}">
                 </form>
                 
                 <form action="{{ route('registration') }}" class="signup" method="POST">

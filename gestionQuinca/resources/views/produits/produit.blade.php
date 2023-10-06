@@ -21,7 +21,7 @@
             @csrf
             @method('post')
               <label for="nom_medoc">Nom Produit</label>
-              <input type="text" name="nom" id="nom" placeholder="Nom du médicament" value="{{ old('nom')}}">
+              <input type="text" name="nom" id="nom" placeholder="Nom du produit" value="{{ old('nom')}}">
 
               @error('nom')
             <div class="text text-danger">
@@ -47,7 +47,7 @@
               </select>
 
              <label for="nom_medoc">Quantité</label>
-              <input type="number" min="1" name="quantite" id="quantite" placeholder="Quantité du médicament" value="{{ old('quantite')}}">
+              <input type="number" min="1" name="quantite" id="quantite" placeholder="Quantité du produit" value="{{ old('quantite')}}">
 
               @error('quantite')
                 <div class="text text-danger">
@@ -56,7 +56,7 @@
               @enderror
               
              <label for="nom_medoc">Quantité Minimum</label>
-              <input type="number" min="1" name="quantiteMin" id="quantiteMin" placeholder="Quantité minimun de stock du médicament" value="{{ old('quantiteMin')}}">
+              <input type="number" min="1" name="quantiteMin" id="quantiteMin" placeholder="Quantité minimun de stock du produit" value="{{ old('quantiteMin')}}">
 
               @error('quantiteMin')
                 <div class="text text-danger">
@@ -65,7 +65,7 @@
               @enderror
 
               <label for="nom_medoc">Prix unitaire</label>
-              <input type="number" min="1" name="prix_unitaire" id="prix_unitaire" placeholder="prix du médicament" value="{{ old('prix_unitaire')}}">
+              <input type="number" min="1" name="prix_unitaire" id="prix_unitaire" placeholder="prix du produit" value="{{ old('prix_unitaire')}}">
 
               @error('prix_unitaire')
                 <div class="text text-danger">
@@ -76,7 +76,7 @@
               
 
                <label for="nom_medoc">Libellé</label>
-              <textarea name="libelle" id="libelle" placeholder="libelle du medicament">{{ old('libelle')}}</textarea>
+              <textarea name="libelle" id="libelle" placeholder="libelle du produit">{{ old('libelle')}}</textarea>
 
               @error('libelle')
                 <div class="text text-danger">
@@ -84,7 +84,7 @@
                 </div>
               @enderror
 
-              <button type="submit" class="btn btn-success mt-1">Ajouter et publié le médicaments</button>
+              <button type="submit" class="btn btn-success mt-1">Ajouter et publié le Produit</button>
 
             </form>
           </div>
@@ -114,10 +114,10 @@
 
          
                 <td> 
-                <form action="#" method="POST">
+                <form action="{{ route('produit.delete',$produit->id) }}" method="POST">
                   @csrf
-                  @method('post')
-                  <a href="#" type="submit" class="btn btn-success mt-1">Editer</a>
+                  @method('delete')
+                  <a href="{{ route('editProduit',$produit->id) }}" type="submit" class="btn btn-success mt-1">Editer</a>
 
                  <button type="submit" class="btn btn-danger mt-1">Supprimer</button>
                 </form>

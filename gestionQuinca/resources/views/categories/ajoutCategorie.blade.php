@@ -54,7 +54,7 @@
               <form action="#" method="POST">
                 @csrf
                 @method('post')
-                <a href="#" type="submit" class="btn btn-success mt-1">Editer</a>
+                <a href="{{ route('editCategorie',$categorie->id) }}" type="submit" class="btn btn-success mt-1">Editer</a>
 
                <button type="submit" class="btn btn-danger mt-1">Supprimer</button>
               </form>

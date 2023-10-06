@@ -17,7 +17,11 @@ class UserControler extends Controller
 //=======================fontion retounant la vue register========================//
     public function index()
     {
-        //
+        return view('users.register');
+    }
+
+    public function login()
+    {
         return view('users.register');
     }
 

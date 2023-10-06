@@ -2,7 +2,7 @@
 @section('page-content')
 
     <div class="container">
-    @if ($listeCommande>0)
+    @if ($listeCommande)
     <hr>
       <h1 class="text-success">Vos commandes</h1>
       <hr>
@@ -11,6 +11,7 @@
             {{session()->get('success')}}
         </div>
       @endif
+
       <table class="table table-striped">
         <thead>
           <tr>

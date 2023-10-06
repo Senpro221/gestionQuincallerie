@@ -12,7 +12,7 @@
     position: fixed;
     height: 100%;
     width: 240px;
-    background: #043927;
+    background: #0d3073;
     transition: all 0.5s ease;
 }
 
@@ -60,11 +60,11 @@
 }
 
 .sidebar .nav-links li a.active {
-    background: #2E8B57;
+    background: #0d3073;
 }
 
 .sidebar .nav-links li a:hover {
-    background: #2E8B57;
+    background: #4982eb;
 }
 
 .sidebar .nav-links li i {
@@ -157,7 +157,7 @@ nav .search-box .bx-search {
     position: absolute;
     height: 40px;
     width: 40px;
-    background: #017b17;
+    background: #0d3073;
     right: 5px;
     top: 50%;
     transform: translateY(-50%);
@@ -321,12 +321,12 @@ nav .profile-details i {
 }
 
 .sales-boxes .box .button a:hover {
-    background: #054719;
+    background: #0d3073;
 }
 
 .sales-boxes .box .button a {
     color: #fff;
-    background: #054719;
+    background: #0d3073;
     padding: 4px 12px;
     font-size: 15px;
     font-weight: 400;
@@ -349,7 +349,7 @@ nav .profile-details i {
 }
 
 .home-content .box .cart.two {
-    color: #2bd47d;
+    color: #0d3073;
     background: #c0f2d8;
 }
 
@@ -423,7 +423,7 @@ nav .profile-details i {
 
 .sales-boxes .box .button a {
     color: #fff;
-    background: #054719;
+    background: #0d3073;
     padding: 4px 12px;
     font-size: 15px;
     font-weight: 400;

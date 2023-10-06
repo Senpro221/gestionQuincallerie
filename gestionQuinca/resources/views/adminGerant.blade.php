@@ -24,8 +24,8 @@
           <div class="box">
             <div class="right-side">
               
-              <div class="box-topic">Produits</div>
-              <div class="number">0</div>
+              <div class="box-topic" style="text-transform: uppercase">Produits</div>
+              <div class="number">{{ $medoc }}</div>
               <div class="indicator">
                 <i class="bx bx-down-arrow-alt down"></i>
                 <span class="text">en stock</span>
@@ -36,11 +36,11 @@
           <div class="box">
             <div class="right-side">
            
-              <div class="box-topic">Ventes</div>
-              <div class="number">0</div>             
+              <div class="box-topic" style="text-transform: uppercase">Ventes</div>
+              <div class="number">{{ $ventes }}</div>             
               <div class="indicator">
                 <i class="bx bx-up-arrow-alt"></i>
-                <span class="text">vendue</span>
+                <span class="text">vendus</span>
               </div>
             </div>
             <i class="bx bx-cart cart three"></i>
@@ -49,8 +49,8 @@
           <div class="box">
            
             <div class="right-side">
-              <div class="box-topic">Commande</div>
-              <div class="number">0</div>
+              <div class="box-topic" style="text-transform: uppercase">Commandes</div>
+              <div class="number">{{ $commandes }}</div>
               <div class="indicator">
                 <i class="bx bx-up-arrow-alt"></i>
                 <span class="text">Enregistrer</span>
@@ -62,8 +62,8 @@
           <div class="box">
             <div class="right-side">
             
-              <div class="box-topic">Utilisateur</div>
-              <div class="number">0</div>
+              <div class="box-topic" style="text-transform: uppercase">Utilisateurs</div>
+              <div class="number">{{ $users }}</div>
               <div class="indicator">
                 <i class="bx bx-down-arrow-alt down"></i>
                 <span class="text">Enregistrer</span>
@@ -85,27 +85,27 @@
               <div class="sales-details">
                 <ul class="details">
                   <li class="topic">Date</li>
-                  {{-- @foreach ($recentComm as $recent)
+                  @foreach ($recentComm as $recent)
                   <li><a href="#">{{ $recent->dateCommande }}</a></li>
-                 @endforeach --}}
+                 @endforeach
                 </ul>        
                 <ul class="details">
                   <li class="topic">Client</li>
-                  {{-- @foreach ($recentComm as $recent)
+                  @foreach ($recentComm as $recent)
                   <li><a href="#">{{ $recent->prenom }} {{ $recent->name }}</a></li>
-                  @endforeach --}}
+                  @endforeach
                 </ul>
                 <ul class="details">
-                  <li class="topic">Médicaments</li>
-                  {{-- @foreach ($recentComm as $recent)
+                  <li class="topic">Produits</li>
+                  @foreach ($recentComm as $recent)
                   <li><a href="#">{{ $recent->nom }}</a></li>
-                  @endforeach --}}
+                  @endforeach
                 </ul>
                 <ul class="details">
-                  <li class="topic">Prix Médicament</li>
-                  {{-- @foreach ($recentComm as $recent)
+                  <li class="topic">Prix du Produit</li>
+                  @foreach ($recentComm as $recent)
                   <li><a href="#"></a>{{ $recent->prix_unitaire }}</li>
-                  @endforeach --}}
+                  @endforeach
                  
                 </ul>
               </div>

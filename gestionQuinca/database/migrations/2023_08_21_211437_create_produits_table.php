@@ -23,7 +23,7 @@ return new class extends Migration
             $table->string('categorie');
             $table->integer('prix_unitaire');
             $table->string('libelle', 255);
-            $table->unsignedBigInteger('id_cat')->nullable();
+            $table->unsignedBigInteger('id_cat');
             $table->timestamps();
         });
     }

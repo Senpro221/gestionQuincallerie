@@ -49,14 +49,14 @@
                     @csrf
 					@method('post')
                     <div style="position: relative">
-						<select name="quantite" id="" class="form-control mr-2 me-4" style="width: 80px">
+						<select name="quantite" id="" class="form-control mr-2 me-4  " style="width: 80px">
 							<option selected="selected">{{ $pan->quantites }}</option>
 							@for ($i = 1 ; $i <= ($pan->quantite) ; $i++)
 								<option value="{{ $i }}"> {{ $i }} </option>
 							@endfor
 						</select>
                         {{-- <input type="number" name="quantite" placeholder="Quantité ?" value="{{ $pan->quantites}}" class="form-control mr-2 me-4" style="width: 80px" > --}}
-                        <input type="submit" class="btn btn-success float-lg-start " value="Actualiser" style="position:absolute; margin-left:94px; margin-top:-38px; width:100px;" />
+                        <input type="submit" class="btn btn-outline-info float-lg-start " value="Actualiser" style="position:absolute; margin-left:94px; margin-top:-38px; width:100px;" />
                     </div>
 					
                 </form>
@@ -86,7 +86,7 @@
 		</tbody>
 		</table>
 		@else
-			<div class="alert alert-info">Aucun médicament dans le panier</div>
+			<div class="alert alert-info">Aucun produits dans le panier</div>
 		   
 		@endif
 	

@@ -31,6 +31,9 @@
             <div>
                 {{ $produit->libelle }}
             </div>
+            <p class="alert alert-success">
+                {{ $produit->quantite }} En stock
+            </p>
             <form action="{{ route('addPanier',$produit->id) }}" method="POST">
                 @csrf
                 @method('post')

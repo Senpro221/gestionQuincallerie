@@ -25,9 +25,18 @@
             <img src="/image/{{ $produit->image }}" style="height: 300px;"  class="card-img-top " alt="vous">  
             <div class="card-body">
                 <div class="card-title" >{{$produit->nom}}</div>
-                <div class="card-text" style="color: orange; font-family: popper;">{{$produit->prix_unitaire}} FCFA</div>
-                <a href="{{ route('detailleProduit',$produit->id) }}" class="btn btn-info mt-2">Détails</a>
-                <a href="{{ route('detailleProduit',$produit->id) }}" class="btn btn-success mt-2">+Ajouter</a>
+                <p
+                {{  $quantite = $produit->quantite ===0 ?'Indisponible':'Disponible' }} 
+                
+                @if($produit->quantite === 0 )
+                    <span class="alert alert-danger p-1 mb-3 ms-0 w-1">Indisponible</span>
+                @else
+                    <span class="alert alert-success p-1 mb-3 ms-1 w-1">En stock</span>
+                
+                 @endif
+
+            </p>                <a href="{{ route('detailleProduit',$produit->id) }}" class="btn btn-info mt-2">Détails</a>
+                <a href="#" class="btn btn-success mt-2">{{$produit->prix_unitaire}} FCFA</a>
             </div>
         </div>
         

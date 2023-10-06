@@ -19,8 +19,8 @@
   <body>
     <div class="sidebar">
       <div class="logo-details">
-        <i class="bx bxl-c-plus-plus"></i>
-        <span class="logo_name" style="margin: 0px; font-size:22px;">SENPHARMACIE</span>
+        <i class="bx bxl-c-plus-plus"></i> 
+        <span class="logo_name" style="margin: 0px; font-size:22px;">QUINCAILLERIE</span>
       </div>
       <ul class="nav-links">
         <li>
@@ -44,31 +44,24 @@
         </li>
         
         <li>
-          <a href="#">
+          <a href="{{ route('listProdAdmin') }}">
             <i class="bx bx-list-ul"></i>
 
             <span class="links_name">Vendre</span>
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="{{ route('stock') }}">
             <i class="bx bx-coin-stack"></i>
             <span class="links_name">Stock</span>
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="{{ route('listeCommandeAll') }}">
             <i class="bx bx-list-ul"></i>
             <span class="links_name">Commandes</span>
           </a>
         </li>
-        <li>
-          <a href="#">
-            <i class="bx bx-pie-chart-alt-2"></i>
-            <span class="links_name">Pharmacies</span>
-          </a>
-        </li>
-       
        
         <li>
           <a href="#">
@@ -77,7 +70,7 @@
           </a>
         </li>
         <li class="log_out">
-          <a href="#">
+          <a href="{{ route("logout") }}">
             <i class="bx bx-log-out"></i>
             <span class="links_name">Déconnexion</span>
           </a>
@@ -100,7 +93,7 @@
            @auth
            <a class="nav-link" href="#">
               <center>
-                <img src="{{ asset('image/profile.png')}}"
+                <img src="{{ asset('image/user.png')}}"
                   alt="Generic placeholder image" class="img-fluid rounded-circle border border-light border-3 me-2"
                   style="width: 50px;">
               </center>
